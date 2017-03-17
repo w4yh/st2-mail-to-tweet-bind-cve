@@ -1,0 +1,9 @@
+LOGFILE=$HOME/procmail.log
+MAILDIR=$HOME/Maildir/
+DEFAULT=$MAILDIR
+LOCKFILE=$HOME/.lockmail
+
+:0 c
+*^X-Original-To: bind-announce@lists.isc.org
+*^Subject: CVE*
+! USERNAME@EXAMPLE.COM

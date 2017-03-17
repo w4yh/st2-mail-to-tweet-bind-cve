@@ -1,0 +1,11 @@
+---
+name: 'bindcve_to_CLI_twitter'
+description: 'Tweets when CVE on BIND has announced.'
+enabled: True
+trigger:
+  type: email.imap.message
+
+action:
+  ref: 'core.local'
+  parameters:
+    cmd: /home/stanley/script/tweet_chofuku.sh {{trigger.subject}}
